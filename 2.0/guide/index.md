@@ -22,9 +22,11 @@
 
 ## 配置参数
 影响分页组件信息展现的因素如下图所示：
+
 ![demo](http://img03.taobaocdn.com/tps/i3/T1nyRlFbdaXXcARYnK-582-214.png)
 
 组件提供以下配置参数：
+
 * `totalPage`，总页数，默认值为10
 * `currentPage`，初始选中的页码，默认值为1
 * `firstPagesCount`，最前面的展现页数，默认值为2
