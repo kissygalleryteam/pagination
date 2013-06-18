@@ -5,7 +5,7 @@
 
 ## 快速使用
 
-    S.use('gallery/pagination/1.0/index', function (S, Pagination) {
+    S.use('gallery/pagination/2.0/index', function (S, Pagination) {
     	
 		// 初始化组件实例
 		var pagination = new Pagination('pagination-wrap', {
@@ -42,4 +42,4 @@
 * `hide()`，隐藏组件
 
 ## Demo
-Demo访问地址：[http://gallery.kissyui.com/pagination/1.0/demo/index.html](http://gallery.kissyui.com/pagination/1.0/demo/index.html)
+Demo访问地址：[http://gallery.kissyui.com/pagination/2.0/demo/index.html](http://gallery.kissyui.com/pagination/2.0/demo/index.html)

@@ -1,16 +1,10 @@
-/*
-combined files : 
-
-gallery/pagination/1.0/index
-
-*/
 /**
  * @fileoverview 分页组件，可以定制分页展示的数量 
  * @author aloysious.ld@taobao.com
- * @version 1.0
+ * @version 2.0
  *
  */
-KISSY.add('gallery/pagination/1.0/index', function(S, Base, EVENT, NODE, DOM){
+KISSY.add('gallery/pagination/2.0/index', function(S, Base, EVENT, NODE, DOM){
 
 	"use strict";
 
@@ -183,4 +177,3 @@ KISSY.add('gallery/pagination/1.0/index', function(S, Base, EVENT, NODE, DOM){
 },{
 	requires:['base', 'event', 'node', 'dom']
 });
-
