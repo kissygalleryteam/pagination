@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Demo</title>
+<script type="text/javascript" src="http://a.tbcdn.cn/??s/kissy/1.3.0/seed-min.js" data-config="{combine:true}"></script>
+</head>
+<body>
+	<style>
+		body {
+			font: 12px/1.5 tahoma,arial,宋体b8b\4f53;
+		}
+		#demo-wrap {
+			width: 990px;
+			margin: auto;
+		}
+		#demo-wrap h2 {
+			color: #36c;
+			font-size: 26px;
+			padding: 20px;
+			margin:auto;
+			text-align: center;
+			text-decoration: underline;
+		}
+		#demo-wrap .demo-con {
+			width: 450px;
+			float: left;
+			margin-top: 30px;
+		}
+		#demo-wrap .demo-detail {
+			float: left;
+			border-left: 1px dashed #fd6d01;
+			padding: 10px;
+		}
+		#demo-wrap .demo-detail h3 {
+			font-size: 16px;
+		}
+		#demo-wrap .demo-detail p {
+			width: 500px;
+			padding: 5px;
+			color: #666;
+			font-size: 12px;
+			background-color: #fff799;
+			border: 1px solid #ccc;
+			border-radius: 5px 5px 5px 5px;
+		}
+		#demo-wrap .demo-log {
+			color: red;
+		}
+		.skin-tb .pagination-start,
+		.skin-tb .pagination-prev,
+		.skin-tb .pagination-next,
+		.skin-tb .pagination-end
+		{
+			width: 36px;
+			background: url(http://img04.taobaocdn.com/tps/i4/T1cP85XihuXXXXXXXX-13-101.png) no-repeat;
+		}
+		.skin-tb .pagination-start,
+		.skin-tb .pagination-prev,
+		.skin-tb .pagination-next,
+		.skin-tb .pagination-end,
+		.skin-tb .pagination-spec,
+		.skin-tb .pagination-curr,
+		.skin-tb .pagination-break
+		{
+			min-width: 16px;
+			_width: 16px;
+			border: 1px solid #ccc;
+			display: inline;
+			float: left;
+			height: 24px;
+			margin-right: 3px;
+			padding: 0 5px;
+			line-height: 24px;
+			text-align: center;
+			font-family: Tahoma,SimSun,Arial;
+			vertical-align: top;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.skin-tb .pagination-start {
+			padding-left: 16px;
+			background-position: 5px 8px;
+		}
+		.skin-tb .pagination-prev {
+			padding-left: 16px;
+			background-position: 0 -12px;
+		}
+		.skin-tb .pagination-curr {
+			font-weight: 700;
+			color: #fd6d01;
+			background-color: #ffede1;
+			border: 1px solid #fd6d01;
+		}
+		.skin-tb .pagination-break {
+			color: #c0c0c0;
+			border: 0;
+		}
+		.skin-tb .pagination-next {
+			padding-right: 16px;
+			background-position: 42px -50px;
+		}
+		.skin-tb .pagination-end {
+			padding-right: 16px;
+			background-position: 47px -31px;
+		}
+		.skin-tb a {
+			color: #36c;
+			cursor: pointer;
+		}
+		.skin-tb a:hover {
+			border: 1px solid #fd6d01;
+		}
+		.skin-tmall {
+			color: #999;
+			font-size: 14px;
+			font-weight: bold;
+			background: url(http://img01.taobaocdn.com/tps/i1/T1O.q5XdVqXXXXXXXX-70-20.png) no-repeat left 0;
+			padding-top: 19px;
+			height: auto;
+		}
+		.skin-tmall .pagination-start,
+		.skin-tmall .pagination-prev,
+		.skin-tmall .pagination-next,
+		.skin-tmall .pagination-end,
+		.skin-tmall .pagination-spec,
+		.skin-tmall .pagination-curr,
+		.skin-tmall .pagination-break
+		{
+			width: auto;
+			border: 1px solid #e5e5e5;
+			height: 28px;
+			padding: 10px 14px 0;
+			margin: 0;
+			font-size: 14px;
+			font-weight: bold;
+			float: left;
+		}
+		.skin-tmall .pagination-prev {
+		}
+		.skin-tmall .pagination-curr {
+			background-color: #efefef;
+			border-left-width: 0;
+		}
+		.skin-tmall .pagination-break {
+			border: 0;
+			border-right: 1px solid #e5e5e5;
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+		.skin-tmall .pagination-spec {
+			border-left-width: 0;
+		}
+		.skin-tmall .pagination-next {
+			border-left-width: 0;
+		}
+		.skin-tmall .pagination-end {
+			border-left-width: 0;
+		}
+		.skin-tmall a {
+			cursor: pointer;
+			color: #2953a6;
+		}
+		.skin-tmall a:hover {
+			background-color: #efefef;
+			text-decoration: underline;
+		}
+	</style>
+	<div id="demo-wrap">
+		<h2>Pagination DEMOs</h2>
+		<div id="demo-1">
+			<div id="demo-container-1" class="demo-con skin-tb"></div>
+			<div class="demo-detail">
+				<h3>仿淘宝皮肤，默认参数调用</h3>
+				<p>new Pagination('demo-container-1');</p>
+				<div id="demo-log-1" class="demo-log">请点击页码</div>
+			</div>
+		</div>
+		<div id="demo-2">
+			<div id="demo-container-2" class="demo-con skin-tb"></div>
+			<div class="demo-detail">
+				<h3>仿淘宝皮肤，自定义参数调用</h3>
+				<p>new Pagination('demo-container-2', {<br/>
+					currentPage: 7, // 默认选中第7页<br/>
+					totalPage: 12, // 一共有12页<br/>
+					firstPagesCount: 2, // 显示最前面的2页<br/>
+					preposePagesCount: 1, // 当前页的紧邻前置页为1页<br/>
+					postposePagesCount: 2, // 当前页的紧邻后置页为2页<br/>
+					lastPagesCount: 1 // 显示最后面的1页<br/>
+				});</p>
+				<div id="demo-log-2" class="demo-log">请点击页码</div>
+			</div>
+		</div>
+		<div id="demo-3">
+			<div id="demo-container-3" class="demo-con skin-tmall"></div>
+			<div class="demo-detail">
+				<h3>仿天猫皮肤，自定义参数调用</h3>
+				<p>new Pagination('demo-container-3', {<br/>
+					currentPage: 2, // 默认选中第2页<br/>
+					totalPage: 10, // 一共有10页<br/>
+					firstPagesCount: 2, // 显示最前面的2页<br/>
+					preposePagesCount: 2, // 当前页的紧邻前置页为2页<br/>
+					postposePagesCount: 1, // 当前页的紧邻后置页为1页<br/>
+					lastPagesCount: 0 // 显示最后面的0页<br/>
+				});</p>
+				<div id="demo-log-3" class="demo-log">请点击页码</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+        var S = KISSY;
+        S.config({
+            packages:[
+                {
+                    name:"kg",
+                    path:"http://g.tbcdn.cn/kg/",
+                    charset:"utf-8",
+                    ignorePackageNameInUri:true
+                }
+            ]
+        });
+
+        if (S.Config.debug) {
+            var srcPath = "../";
+            S.config({
+                packages:[
+                    {
+                        name:"kg/demo/2.0.0",
+                        path:srcPath,
+                        charset:"utf-8",
+                        ignorePackageNameInUri:true
+                    }
+                ]
+            });
+        }
+
+	KISSY.use('dom, sizzle, kg/pagination/2.0.0/index',function(S, DOM, Sizzle, Pagination){
+		var pagination1 = new Pagination('demo-container-1');
+		var pagination2 = new Pagination('demo-container-2', {
+			currentPage: 7,
+			totalPage: 12,
+			firstPagesCount: 2,
+			preposePagesCount: 1,
+			postposePagesCount: 2,
+			lastPagesCount: 1
+		});
+		var pagination3 = new Pagination('demo-container-3', {
+			currentPage: 2,
+			totalPage: 10,
+			firstPagesCount: 2,
+			preposePagesCount: 2,
+			postposePagesCount: 1,
+			lastPagesCount: 0
+		});
+
+		pagination1.on('switch', function(e) {
+			DOM.html('#demo-log-1', 'OK，你切换到了第' + e.toPage + '页');
+		});
+		pagination2.on('switch', function(e) {
+			alert('切换到第' + e.toPage + '页');
+			DOM.html('#demo-log-2', '弹框不是告诉你到第' + e.toPage + '页了么？');
+		});
+		pagination3.on('switch', function(e) {
+			DOM.html('#demo-log-3', '噢，第' + e.toPage + '页');
+		});
+	});
+		
+	</script>
+</body>
+</html>
