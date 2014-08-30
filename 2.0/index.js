@@ -69,7 +69,8 @@ KISSY.add('gallery/pagination/2.0/index', function(S, Base, EVENT, NODE, DOM){
 		},
 		render: function() {
 			this.renderUI();
-			this.bindUI();
+			if(Pagination._isBind === undefined) this.bindUI();
+			Pagination._isBind = true;
 			this.syncUI();
 		},
 		renderUI: function() {
