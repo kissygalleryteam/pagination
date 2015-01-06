@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pagination</title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com-prettify.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.css">
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdn.staticfile.org/prettify/r298/prettify.min.js"></script>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" data-config="{combine:true}"></script>
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div id="header"><a href="http://docs.kissyui.com/" class="logo">kissy</a>
+      <nav><a href="http://docs.kissyui.com/1.4/docs/html/coms.html">优秀组件推荐</a></nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 bs-docs-sidebar">
+          <ul data-spy="affix" data-offset-top="0" class="nav nav-list bs-docs-sidenav"></ul>
+        </div>
+        <div class="span9 bs-docs-content">
+          <h1 data-id="undefined" class="title">pagination</h1>
+          <p class="author-wrapper"><span>组件有问题？旺旺联系作者：</span><a href="https://github.com/undefined" target="_blank" data-name="首作" class="author"><img src="http://0.gravatar.com/avatar/a4605c3a791bad661f28b0a003faf5b0?s=60" alt="首作"></a><span class="author-name">首作</span>
+          </p>
+          <div class="common-link"><a href="../demo/index.html" target="_blank" class="demo">示例</a><a href="https://github.com/kissygalleryteam/pagination" target="_blank" class="source">源码</a></div>
+          <p class="com-info"><span class="info-label">View</span><span data-com="pagination" class="J_View">985</span></p>
+          <p class="com-info"><span class="info-label">所属分类</span><a href="http://kpm.taobao.net/list/UI">UI</a>
+          </p>
+          <p class="com-info"><span class="info-label">kissy版本</span><span>1.4.X</span>
+          </p><ul>
+<li>author 首作</li>
+</ul>
+<h2 id="-">简介</h2>
+<p>这是一个简单的分页组件，使用者可以方便地自定义页码的展现形式和展现数量，可以监听页码的切换函数</p>
+<h2 id="-">快速使用</h2>
+<pre><code>S.use(&#39;kg/pagination/2.0.0/index&#39;, function (S, Pagination) {
+
+    // 初始化组件实例
+    var pagination = new Pagination(&#39;pagination-wrap&#39;, {
+        currentPage: 1,    // 默认选中的页码
+        totalPage: 12      // 总页数
+    });
+
+    // 监听页码切换
+    pagination.on(&#39;switch&#39;, function(e) {
+        // 打印切换至的页码
+        console.log(e.toPage);    
+    });
+});
+</code></pre><h2 id="-">配置参数</h2>
+<p>影响分页组件信息展现的因素如下图所示：
+<img src="http://img03.taobaocdn.com/tps/i3/T1nyRlFbdaXXcARYnK-582-214.png" alt="demo"></p>
+<p>组件提供以下配置参数：</p>
+<ul>
+<li><code>totalPage</code>，总页数，默认值为10</li>
+<li><code>currentPage</code>，初始选中的页码，默认值为1</li>
+<li><code>firstPagesCount</code>，最前面的展现页数，默认值为2</li>
+<li><code>preposePagesCount</code>，当前页的紧邻前置页数，默认值为2</li>
+<li><code>postposePagesCount</code>，当前页的紧邻后置页数，默认值为1</li>
+<li><code>lastPagesCount</code>，最后面的展现页数，默认值为0</li>
+<li><code>render</code>，是否自动渲染组件，默认值为true</li>
+</ul>
+<h2 id="-">提供事件</h2>
+<ul>
+<li><code>switch</code>，在切换页码时触发，通过事件对象e的toPage属性获取切换到的页码</li>
+</ul>
+<h2 id="-">公有方法</h2>
+<ul>
+<li><code>render()</code>，渲染组件</li>
+<li><code>show()</code>，显示组件</li>
+<li><code>hide()</code>，隐藏组件</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<p>Demo访问地址：<a href="http://kg.kissyui.com/pagination/2.0.0/demo/index.html">http://kg.kissyui.com/pagination/2.0.0/demo/index.html</a></p>
+
+          <div style="display:none;"><script type="text/javascript" src="http://tajs.qq.com/stats?sId=36378479" charset="UTF-8"></script></div>
+          <script src="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
